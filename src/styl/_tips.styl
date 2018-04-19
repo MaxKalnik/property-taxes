@@ -1,0 +1,89 @@
+.tips
+  position: relative
+  display: flex
+  flex-direction: column
+  margin: 0 auto
+  color: $color-white
+
+.tips__item
+  margin-bottom: 45px
+
+  +respond-to($small)
+    margin-bottom: 32px
+
+.tips__item-title
+  font-size: 24px
+  line-height: 32px
+  margin-bottom: 24px
+
+  +respond-to($xsmall)
+    margin-bottom: 16px
+
+.tips__list
+  margin-bottom: 64px
+  margin-left: 600px
+
+  +respond-from($large)
+    margin-left: 695px
+
+  +respond-to($medium)
+    margin: 0
+
+.tips__list-item
+  position: relative
+  padding-left: 34px
+  margin-bottom: 32px
+  &:last-child
+    margin-bottom: 0
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 8px
+    width: 10px
+    height: 10px
+    background-color: $color-white
+    border-radius: 50%
+
+.tips__list-item-text
+  @extend .main-text
+  color: $color-white
+
+.tips__items
+  width: 720px
+  margin: 0 auto
+
+  +respond-to($medium)
+    width: 100%
+
+.tips__item-text
+  @extend .main-text
+  color: $color-white
+
+  +respond-to($xsmall)
+    margin-bottom: 16px
+
+a.tips__item-link
+  color: $color-white
+  border-bottom-color: alpha($color-white, 0.5)
+
+.tips__ilustration
+  position: absolute
+  left: 0
+  top: 39px
+  width: 540px
+  height: auto
+  margin: 0 auto
+  margin-top: 52px
+
+  +respond-to($medium)
+    width: 470px
+    position: static
+    margin-top: 32px
+    margin-bottom: 64px
+
+  +respond-to($xsmall)
+    width: 276px
+    height: auto
+    margin-bottom: 49px

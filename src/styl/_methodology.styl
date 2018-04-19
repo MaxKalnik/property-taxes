@@ -1,0 +1,90 @@
+.methodology__content
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  margin-bottom: 45px
+
+  +respond-to($medium)
+    margin-bottom: 30px
+
+  +respond-to($xsmall)
+    flex-direction: column
+    align-items: center
+    margin-bottom: 24px
+
+.methodology__img
+  position: relative
+  margin-right: 33px
+  top: 5px
+
+  +respond-to($xsmall)
+    margin-right: 0
+    margin-bottom: 24px
+
+.methodology__text-item
+  @extend .main-text
+  margin-bottom: 24px
+  &:last-child
+    margin-bottom: 0
+
+.methodology__sources
+  margin-left: 99px
+  +respond-to($xsmall)
+    margin-left: 0
+
+  .list-icon
+    width: 16px
+    height: 16px
+    position: absolute
+    left: 0
+    top: 4px
+
+.methodology__sources-title
+  font-size: 18px
+  line-height: 26px
+  font-weight: 600
+  margin-bottom: 12px
+
+.methodology__sources-link
+  display: inline
+  border-bottom: 1px solid #cbe4f0
+  cursor: pointer
+  color: #1e92cc
+  line-height: 20px
+  font-style: italic
+  &:hover
+    border-bottom: 1px solid transparent
+
+.methodology__sources-list
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+
+.methodology__sources-list-item
+  position: relative
+  font-size: 14px
+  line-height: 26px
+  font-weight: 300
+  padding-left: 17px
+  box-sizing: border-box
+  font-style: italic
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 10px
+    width: 6px
+    height: 6px
+    background: url(images/icons/methodology-bullet.svg) center no-repeat
+
+.methodology__sources-list-text
+  font-weight: 600
+
+.methodology__sources-list-link
+  @extend .main-link
+
+.methodology__sources-sublist-item--italic
+  font-style: italic
+
+.methodology__sources-ab-sublist
+  padding-left: 24px

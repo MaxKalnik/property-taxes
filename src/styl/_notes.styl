@@ -1,0 +1,97 @@
+.notes
+  position: relative
+  display: flex
+  flex-direction: row
+  border: 1px solid #95B7FB
+  background-color: #DCE7FE
+  padding: 32px
+
+  +respond-from($large)
+    padding-bottom: 100px
+
+  +respond-to($xsmall)
+    flex-direction: column
+    padding: 12px
+
+.notes-title
+  margin-bottom: 24px
+  font-size: 23px
+  line-height: 32px
+  font-weight: 600
+
+  +respond-to($xsmall)
+    margin-bottom: 16px
+    font-size: 20px
+
+.notes-exemptions
+  width: 500px
+  margin-right: 66px
+
+  +respond-from($large)
+    width: 540px
+    margin-right: 96px
+
+  +respond-to($medium)
+    width: 400px
+    margin-right: 48px
+
+  +respond-to($small)
+    width: 300px
+    margin-right: 28px
+
+  +respond-to($xsmall)
+    width: 100%
+    margin-right: 0
+
+.notes-equalization
+  width: 500px
+
+  +respond-from($large)
+    width: 540px
+
+  +respond-to($medium)
+    width: 400px
+
+  +respond-to($small)
+    width: 300px
+
+  +respond-to($xsmall)
+    width: 100%
+
+.notes-exemptions-text,
+.notes-equalization-text
+  @extend .main-text
+
+.notes__icon
+  position: absolute
+  left: 0
+  bottom: 0
+  width: 537px
+  height: 260px
+
+  +respond-to($medium)
+    width: 436px
+    height: auto
+
+  +respond-to($small)
+    width: 316px
+    height: auto
+
+  +respond-to($xsmall)
+    position: static
+    width: 286px
+    margin-top: 40px
+    margin-bottom: 25px
+    margin-left: -12px
+
+.notes__icon--desktop
+  +respond-to($small)
+    display: none
+
+.notes__icon--mob
+  display: none
+  width: 274px
+  height: auto
+
+  +respond-to($small)
+    display: block

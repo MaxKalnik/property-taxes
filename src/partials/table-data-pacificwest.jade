@@ -1,0 +1,833 @@
+-
+  var values = [
+   {
+     rank: 1,
+     name: "Klamath",
+     state: "OR"
+   },
+   {
+     rank: 2,
+     name: "Hawaii",
+     state: "HI"
+   },
+   {
+     rank: 3,
+     name: "Kenai Peninsula",
+     state: "AK"
+   },
+   {
+     rank: 4,
+     name: "Tulare",
+     state: "CA"
+   },
+   {
+     rank: 5,
+     name: "Kings",
+     state: "CA"
+   },
+   {
+     rank: 6,
+     name: "Grays Harbor",
+     state: "WA"
+   },
+   {
+     rank: 7,
+     name: "Tehama",
+     state: "CA"
+   },
+   {
+     rank: 8,
+     name: "Grant",
+     state: "WA"
+   },
+   {
+     rank: 9,
+     name: "Douglas",
+     state: "OR"
+   },
+   {
+     rank: 10,
+     name: "Umatilla",
+     state: "OR"
+   },
+   {
+     rank: 11,
+     name: "Lewis",
+     state: "WA"
+   },
+   {
+     rank: 12,
+     name: "Maui",
+     state: "HI"
+   },
+   {
+     rank: 13,
+     name: "Yakima",
+     state: "WA"
+   },
+   {
+     rank: 14,
+     name: "Merced",
+     state: "CA"
+   },
+   {
+     rank: 15,
+     name: "Coos",
+     state: "OR"
+   },
+   {
+     rank: 16,
+     name: "Cowlitz",
+     state: "WA"
+   },
+   {
+     rank: 17,
+     name: "Kern",
+     state: "CA"
+   },
+   {
+     rank: 18,
+     name: "Madera",
+     state: "CA"
+   },
+   {
+     rank: 19,
+     name: "Lake",
+     state: "CA"
+   },
+   {
+     rank: 20,
+     name: "Yuba",
+     state: "CA"
+   },
+   {
+     rank: 21,
+     name: "Benton",
+     state: "WA"
+   },
+   {
+     rank: 22,
+     name: "Stanislaus",
+     state: "CA"
+   },
+   {
+     rank: 23,
+     name: "Fresno",
+     state: "CA"
+   },
+   {
+     rank: 24,
+     name: "Butte",
+     state: "CA"
+   },
+   {
+     rank: 25,
+     name: "Shasta",
+     state: "CA"
+   },
+   {
+     rank: 26,
+     name: "Josephine",
+     state: "OR"
+   },
+   {
+     rank: 27,
+     name: "Franklin",
+     state: "WA"
+   },
+   {
+     rank: 28,
+     name: "Fairbanks North Star",
+     state: "AK"
+   },
+   {
+     rank: 29,
+     name: "Spokane",
+     state: "WA"
+   },
+   {
+     rank: 30,
+     name: "Sutter",
+     state: "CA"
+   },
+   {
+     rank: 31,
+     name: "Walla Walla",
+     state: "WA"
+   },
+   {
+     rank: 32,
+     name: "Matanuska-Susitna",
+     state: "AK"
+   },
+   {
+     rank: 33,
+     name: "Clallam",
+     state: "WA"
+   },
+   {
+     rank: 34,
+     name: "Chelan",
+     state: "WA"
+   },
+   {
+     rank: 35,
+     name: "San Bernardino",
+     state: "CA"
+   },
+   {
+     rank: 36,
+     name: "Kauai",
+     state: "HI"
+   },
+   {
+     rank: 37,
+     name: "Linn",
+     state: "OR"
+   },
+   {
+     rank: 38,
+     name: "Honolulu",
+     state: "HI"
+   },
+   {
+     rank: 39,
+     name: "Marion",
+     state: "OR"
+   },
+   {
+     rank: 40,
+     name: "Thurston",
+     state: "WA"
+   },
+   {
+     rank: 41,
+     name: "Sacramento",
+     state: "CA"
+   },
+   {
+     rank: 42,
+     name: "Lane",
+     state: "OR"
+   },
+   {
+     rank: 43,
+     name: "San Joaquin",
+     state: "CA"
+   },
+   {
+     rank: 44,
+     name: "Yamhill",
+     state: "OR"
+   },
+   {
+     rank: 45,
+     name: "Kitsap",
+     state: "WA"
+   },
+   {
+     rank: 46,
+     name: "Humboldt",
+     state: "CA"
+   },
+   {
+     rank: 47,
+     name: "Island",
+     state: "WA"
+   },
+   {
+     rank: 48,
+     name: "Polk",
+     state: "OR"
+   },
+   {
+     rank: 49,
+     name: "Solano",
+     state: "CA"
+   },
+   {
+     rank: 50,
+     name: "Jackson",
+     state: "OR"
+   },
+   {
+     rank: 51,
+     name: "Skagit",
+     state: "WA"
+   },
+   {
+     rank: 52,
+     name: "Pierce",
+     state: "WA"
+   },
+   {
+     rank: 53,
+     name: "Whatcom",
+     state: "WA"
+   },
+   {
+     rank: 54,
+     name: "Clark",
+     state: "WA"
+   },
+   {
+     rank: 55,
+     name: "Riverside",
+     state: "CA"
+   },
+   {
+     rank: 56,
+     name: "Anchorage",
+     state: "AK"
+   },
+   {
+     rank: 57,
+     name: "Deschutes",
+     state: "OR"
+   },
+   {
+     rank: 58,
+     name: "Snohomish",
+     state: "WA"
+   },
+   {
+     rank: 59,
+     name: "Yolo",
+     state: "CA"
+   },
+   {
+     rank: 60,
+     name: "WA",
+     state: "OR"
+   },
+   {
+     rank: 61,
+     name: "El Dorado",
+     state: "CA"
+   },
+   {
+     rank: 62,
+     name: "Benton",
+     state: "OR"
+   },
+   {
+     rank: 63,
+     name: "Multnomah",
+     state: "OR"
+   },
+   {
+     rank: 64,
+     name: "Mendocino",
+     state: "CA"
+   },
+   {
+     rank: 65,
+     name: "Clackamas",
+     state: "OR"
+   },
+   {
+     rank: 66,
+     name: "Placer",
+     state: "CA"
+   },
+   {
+     rank: 67,
+     name: "Nevada",
+     state: "CA"
+   },
+   {
+     rank: 68,
+     name: "San Benito",
+     state: "CA"
+   },
+   {
+     rank: 69,
+     name: "Contra Costa",
+     state: "CA"
+   },
+   {
+     rank: 70,
+     name: "San Diego",
+     state: "CA"
+   },
+   {
+     rank: 71,
+     name: "King",
+     state: "WA"
+   },
+   {
+     rank: 72,
+     name: "Ventura",
+     state: "CA"
+   },
+   {
+     rank: 73,
+     name: "Sonoma",
+     state: "CA"
+   },
+   {
+     rank: 74,
+     name: "San Luis Obispo",
+     state: "CA"
+   },
+   {
+     rank: 75,
+     name: "Monterey",
+     state: "CA"
+   },
+   {
+     rank: 76,
+     name: "Los Angeles",
+     state: "CA"
+   },
+   {
+     rank: 77,
+     name: "Napa",
+     state: "CA"
+   },
+   {
+     rank: 78,
+     name: "Orange",
+     state: "CA"
+   },
+   {
+     rank: 79,
+     name: "Santa Barbara",
+     state: "CA"
+   },
+   {
+     rank: 80,
+     name: "Alameda",
+     state: "CA"
+   },
+   {
+     rank: 81,
+     name: "Santa Cruz",
+     state: "CA"
+   },
+   {
+     rank: 82,
+     name: "Santa Clara",
+     state: "CA"
+   },
+   {
+     rank: 83,
+     name: "San Francisco",
+     state: "CA"
+   },
+   {
+     rank: 84,
+     name: "San Mateo",
+     state: "CA"
+   },
+   {
+     rank: 85,
+     name: "Marin",
+     state: "CA"
+   },
+   {
+     rank: 86,
+     name: "Spokane",
+     state: "WA"
+   },
+   {
+     rank: 87,
+     name: "Lincoln",
+     state: "OR"
+   },
+   {
+     rank: 88,
+     name: "Jackson",
+     state: "OR"
+   },
+   {
+     rank: 89,
+     name: "San Joaquin",
+     state: "CA"
+   },
+   {
+     rank: 90,
+     name: "Yamhill",
+     state: "OR"
+   },
+   {
+     rank: 91,
+     name: "Lane",
+     state: "OR"
+   },
+   {
+     rank: 92,
+     name: "Jefferson",
+     state: "WA"
+   },
+   {
+     rank: 93,
+     name: "Mendocino",
+     state: "CA"
+   },
+   {
+     rank: 94,
+     name: "Sacramento",
+     state: "CA"
+   },
+   {
+     rank: 95,
+     name: "Marion",
+     state: "OR"
+   },
+   {
+     rank: 96,
+     name: "Mono",
+     state: "CA"
+   },
+   {
+     rank: 97,
+     name: "Hood River",
+     state: "OR"
+   },
+   {
+     rank: 98,
+     name: "Polk",
+     state: "OR"
+   },
+   {
+     rank: 99,
+     name: "Island",
+     state: "WA"
+   },
+   {
+     rank: 100,
+     name: "Whatcom",
+     state: "WA"
+   },
+   {
+     rank: 101,
+     name: "Solano",
+     state: "CA"
+   },
+   {
+     rank: 102,
+     name: "Kodiak Island",
+     state: "AK"
+   },
+   {
+     rank: 103,
+     name: "Matanuska-Susitna",
+     state: "AK"
+   },
+   {
+     rank: 104,
+     name: "Deschutes",
+     state: "OR"
+   },
+   {
+     rank: 105,
+     name: "Thurston",
+     state: "WA"
+   },
+   {
+     rank: 106,
+     name: "Skagit",
+     state: "WA"
+   },
+   {
+     rank: 107,
+     name: "Kitsap",
+     state: "WA"
+   },
+   {
+     rank: 108,
+     name: "Riverside",
+     state: "CA"
+   },
+   {
+     rank: 109,
+     name: "Clark",
+     state: "WA"
+   },
+   {
+     rank: 110,
+     name: "Fairbanks North Star",
+     state: "AK"
+   },
+   {
+     rank: 111,
+     name: "Juneau",
+     state: "AK"
+   },
+   {
+     rank: 112,
+     name: "Pierce",
+     state: "WA"
+   },
+   {
+     rank: 113,
+     name: "Nevada",
+     state: "CA"
+   },
+   {
+     rank: 114,
+     name: "San Juan",
+     state: "WA"
+   },
+   {
+     rank: 115,
+     name: "El Dorado",
+     state: "CA"
+   },
+   {
+     rank: 116,
+     name: "Monterey",
+     state: "CA"
+   },
+   {
+     rank: 117,
+     name: "Yolo",
+     state: "CA"
+   },
+   {
+     rank: 118,
+     name: "Benton",
+     state: "OR"
+   },
+   {
+     rank: 119,
+     name: "Snohomish",
+     state: "WA"
+   },
+   {
+     rank: 120,
+     name: "Multnomah",
+     state: "OR"
+   },
+   {
+     rank: 121,
+     name: "WA",
+     state: "OR"
+   },
+   {
+     rank: 122,
+     name: "San Benito",
+     state: "CA"
+   },
+   {
+     rank: 123,
+     name: "San Diego",
+     state: "CA"
+   },
+   {
+     rank: 124,
+     name: "Clackamas",
+     state: "OR"
+   },
+   {
+     rank: 125,
+     name: "San Luis Obispo",
+     state: "CA"
+   },
+   {
+     rank: 126,
+     name: "Santa Barbara",
+     state: "CA"
+   },
+   {
+     rank: 127,
+     name: "Sonoma",
+     state: "CA"
+   },
+   {
+     rank: 128,
+     name: "Placer",
+     state: "CA"
+   },
+   {
+     rank: 129,
+     name: "Los Angeles",
+     state: "CA"
+   },
+   {
+     rank: 130,
+     name: "Ventura",
+     state: "CA"
+   },
+   {
+     rank: 131,
+     name: "Napa",
+     state: "CA"
+   },
+   {
+     rank: 132,
+     name: "Anchorage",
+     state: "AK"
+   },
+   {
+     rank: 133,
+     name: "King",
+     state: "WA"
+   },
+   {
+     rank: 134,
+     name: "Contra Costa",
+     state: "CA"
+   },
+   {
+     rank: 135,
+     name: "Orange",
+     state: "CA"
+   },
+   {
+     rank: 136,
+     name: "Santa Cruz",
+     state: "CA"
+   },
+   {
+     rank: 137,
+     name: "Alameda",
+     state: "CA"
+   },
+   {
+     rank: 138,
+     name: "Santa Clara",
+     state: "CA"
+   },
+   {
+     rank: 139,
+     name: "San Francisco",
+     state: "CA"
+   },
+   {
+     rank: 140,
+     name: "San Mateo",
+     state: "CA"
+   },
+   {
+     rank: 141,
+     name: "Marin",
+     state: "CA"
+   },
+   {
+     rank: 142,
+     name: "Wrangell",
+     state: "AK"
+   },
+   {
+     rank: 143,
+     name: "Valdez-Cordova",
+     state: "AK"
+   },
+   {
+     rank: 144,
+     name: "Sierra",
+     state: "CA"
+   },
+   {
+     rank: 145,
+     name: "Kusilvak",
+     state: "AK"
+   },
+   {
+     rank: 146,
+     name: "Skagway",
+     state: "AK"
+   },
+   {
+     rank: 147,
+     name: "Hoonah-Angoon",
+     state: "AK"
+   },
+   {
+     rank: 148,
+     name: "Lake and Peninsula",
+     state: "AK"
+   },
+   {
+     rank: 149,
+     name: "Ketchikan Gateway",
+     state: "AK"
+   },
+   {
+     rank: 150,
+     name: "Bristol Bay",
+     state: "AK"
+   },
+   {
+     rank: 151,
+     name: "North Slope",
+     state: "AK"
+   },
+   {
+     rank: 152,
+     name: "Haines",
+     state: "AK"
+   },
+   {
+     rank: 153,
+     name: "Imperial",
+     state: "AK"
+   },
+   {
+     rank: 154,
+     name: "Yakutat",
+     state: "AK"
+   },
+   {
+     rank: 155,
+     name: "Bethel",
+     state: "AK"
+   },
+   {
+     rank: 156,
+     name: "Dillingham",
+     state: "AK"
+   },
+   {
+     rank: 157,
+     name: "Aleutians East",
+     state: "AK"
+   },
+   {
+     rank: 158,
+     name: "Denali",
+     state: "AK"
+   },
+   {
+     rank: 159,
+     name: "Southeast Fairbanks",
+     state: "AK"
+   },
+   {
+     rank: 160,
+     name: "Kalawao",
+     state: "HI"
+   },
+   {
+     rank: 161,
+     name: "Northwest Arctic",
+     state: "AK"
+   },
+   {
+     rank: 162,
+     name: "Yukon-Koyukuk",
+     state: "AK"
+   },
+   {
+     rank: 163,
+     name: "Nome",
+     state: "AK"
+   },
+   {
+     rank: 164,
+     name: "Alpine",
+     state: "AK"
+   },
+   {
+     rank: 165,
+     name: "Prince of Wales-Hyder",
+     state: "AK"
+   },
+   {
+     rank: 166,
+     name: "Petersburg",
+     state: "AK"
+   }
+  ]
