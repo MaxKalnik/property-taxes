@@ -19,13 +19,16 @@ html
           section.section.section--upper
             include ./partials/upper.jade
 
-          section.section
+          section.section.section--notes
             include ./partials/notes.jade
 
           include ./partials/states.jade
 
           section.section.section--tips
             include ./partials/tips.jade
+
+          section.section.section--cards
+            include ./partials/cards.jade
 
           section.section.section--methodology
             include ./partials/methodology.jade
@@ -38,10 +41,3 @@ html
       include ./partials/footer.jade
 
     script(type='text/javascript', src='js/script.min.js')
-
-    //- script(type='text/javascript', src='js/jquery-1.11.1.min.js')
-    //- script(type='text/javascript', src='js/jquery.iframetracker.js')
-    //- script(type='text/javascript', src='js/photoswipe-ui-default.js')
-    //- script(type='text/javascript', src='js/photoswipe.js')
-    //- script(type='text/javascript', src='js/pswp.js')
-    //- script(type='text/javascript', src='js/local.js')

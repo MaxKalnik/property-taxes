@@ -68,7 +68,10 @@ rankings(primaryColor)
       margin-top: -45px
       border-radius: 0
       margin-bottom: 45px
-      padding-left: 16px
+      padding: 24px 16px
+      background-color: alpha(#4F87FA, 0.3) !important
+      border: 1px solid alpha(#4F87FA, 0.5) !important
+      color: #0A0C0D
 
   .rankings__info-icon
     width: 32px
@@ -84,8 +87,10 @@ rankings(primaryColor)
       left: 16px
 
     +respond-to($xsmall)
+      width: 32px
+      height: 32px
       left: 50%
-      top: -12px
+      top: -16px
       transform: translateX(-50%)
 
   .rankings__info

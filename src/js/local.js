@@ -82,4 +82,11 @@ $(document).ready(function () {
             openPhotoSwipe(items[5]);
         }
     });
+
+    var itemsArr = ['northeast', 'southatlantic', 'southcentral', 'midwest', 'mountainwest', 'pacificwest'];
+    itemsArr.forEach(function (elem, index) {
+        body.on('click', '.map__tap-to-full-size--' + elem, function () {
+            openPhotoSwipe(items[index]);
+        });
+    });
 });

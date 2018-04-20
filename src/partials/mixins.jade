@@ -34,8 +34,11 @@ mixin states_rank(stateData)
               != stateItem.text
 
   .map
+    a(class='map__tap-to-full-size map__tap-to-full-size--#{stateData.frameID}')
+      | Tap For Full Size
+
     .frame-wrapper
-      iframe(id='#{stateData.frameID}' src='https://static0.rewardexpert.com/shared/#{stateData.iframe}' width = "1130px", height = 'auto', frameborder="0", scrolling = "no")
+      iframe(id='#{stateData.frameID}' src='https://www.rewardexpert.com/shared/#{stateData.iframe}' width = "1130px", height = 'auto', frameborder="0", scrolling = "no")
 
     .map__user-block
       .map__btn-wrapper.map__btn-wrapper--share
@@ -66,13 +69,13 @@ mixin states_rank(stateData)
         .map__btn-container.map__btn-container--embed
           .map__btn-embed
             textarea.map__btn-embed-text#copyTarget(autofocus='', readonly='')
-              | <iframe src="https://static0.rewardexpert.com/shared/#{stateData.iframe}/" width="1130px" height="auto" frameborder="0" scrolling="no"></iframe><div style="width:100%;text-align:right;font-size:14px;color:#0a0c0d;margin-bottom:16px;">Source: <a style="color:#2093cd;" href="https://www.rewardexpert.com/blog/studies/which-u-s-states-are-home-to-the-grumpiest-and-happiest-travelers/">RewardExpert Blog</a></div>
+              | <iframe src="https://www.rewardexpert.com/shared/#{stateData.iframe}/" width="1130px" height="auto" frameborder="0" scrolling="no"></iframe><div style="width:100%;text-align:right;font-size:14px;color:#0a0c0d;margin-bottom:16px;">Source: <a style="color:#2093cd;" href="https://www.rewardexpert.com/blog/studies/best-u-s-counties-for-property-taxes/">RewardExpert Blog</a></div>
 
             button.map__btn-embed-copy#copyButton
               | copy to clipboard
 
   .btn__container.btn__container--green
     a.btn__main(href='/#{stateData.tableURL}.html')
-      span.btn__main-text Click here too see the full ranking
+      span.btn__main-text CLICK HERE FOR THE FULL REGIONAL RANKING
 
       +btn_icon

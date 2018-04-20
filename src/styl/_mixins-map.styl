@@ -14,6 +14,27 @@ userBlock(primaryColor)
     +respond-to($xsmall)
       margin: 25px 12px 0 12px
 
+  .map__tap-to-full-size
+    width: 112px
+    margin-left: auto
+    margin-right: auto
+    color: $color-purple
+    font-size: 12px
+    line-height: 16px
+    border-bottom: 1px solid alpha($color-purple, 0.4)
+    margin-bottom: 16px
+    text-transform: uppercase
+    font-weight: 600
+    text-align:center
+    transition: .25s ease-out
+    cursor: pointer
+    display: none
+    &:hover
+      border-bottom: 1px solid alpha($color-purple, 0)
+
+    +respond-to($small)
+      display: block
+
   .map__user-block
     position: relative
     display: flex

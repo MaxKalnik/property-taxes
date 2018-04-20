@@ -1,0 +1,74 @@
+.cards
+  padding: 45px 45px 60px 45px
+  background: url('images/photo/bg_cards.png') center no-repeat
+  background-size: cover
+  border: 1px solid #AAACF0
+  border-radius: 3px
+  @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+    background: url('images/photo/bg_cards@2x.png') center no-repeat
+    background-size: cover
+
+  +respond-from($large)
+    background: url('images/photo/bg_cards_1920.png') center no-repeat
+    background-size: cover
+    @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+      background: url('images/photo/bg_cards_1920@2x.png') center no-repeat
+      background-size: cover
+
+  +respond-to($medium)
+    padding: 32px 45px 32px 32px
+    background: url('images/photo/bg_cards_1020.png') center no-repeat
+    background-size: cover
+    @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
+      background: url('images/photo/bg_cards_1020@2x.png') center no-repeat
+      background-size: cover
+
+  +respond-to($small)
+    padding: 32px
+    background-image: none
+    background-color: #ECEDFB
+
+  +respond-to($xsmall)
+    padding: 32px 16px
+
+.cards__content
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+
+  +respond-to($medium)
+    margin-top: 45px
+
+  +respond-to($small)
+    margin-top: 0
+
+  +respond-to($xsmall)
+    flex-direction: column
+    align-items: center
+
+.cards-item-img
+  margin-bottom: 12px
+
+.cards-item
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  cursor: pointer
+
+  &:hover
+    .cards-item-text
+      border-bottom: 1px solid rgba(255, 255, 255, 0)
+
+  +respond-to($xsmall)
+    margin-bottom: 24px
+    &:last-child
+      margin-bottom: 0
+
+.cards-item-text-wrap
+  display: inline-block
+  text-align: center
+
+.cards-item-text
+  @extend .main-link
+  color: #1E92CC

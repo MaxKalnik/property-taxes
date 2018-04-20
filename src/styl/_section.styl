@@ -146,9 +146,8 @@ upperSectionImg(imgName)
   +respond-to($xxsmall)
     background: url('images/photo/' + imgName + '_320.png') center no-repeat
     @media (-webkit-min-device-pixel-ratio: 2),( min--moz-device-pixel-ratio: 2),(-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2),(min-resolution: 192dpi), (min-resolution: 2dppx)
-      background: url('images/photo/' + imgName + '_320@2x.png') center no-repeat
+      background: url('images/photo/' + imgName + '_320@2x.png') inherit no-repeat
       background-size: cover
-
 
 .section--northeast
   .section__upper
@@ -173,6 +172,14 @@ upperSectionImg(imgName)
 .section--pacificWest
   .section__upper
     upperSectionImg('pacific_west_photo')
+
+.section--notes
+  +respond-to($xsmall)
+    padding: 0
+
+.section--upper
+  +respond-to($xsmall)
+    margin-bottom: 0
 
 .section__upper-text
   .section__title
