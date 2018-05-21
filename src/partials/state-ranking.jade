@@ -1,0 +1,77 @@
+include ./table-data-state-ranking
+include ./svg-mixins
+
+.section.section--table.section--table-default
+  h2.section__title
+    | Best U.S. Counties and States for Property Taxes
+
+  .ranking-table__container-wrapper
+    .ranking-table__hint
+        .ranking-table__hint-close-btn
+        p.ranking-table__hint-text
+          | Cities are sorted by default. 
+          span.semibold
+            | You could sort by other parameter.
+
+    .ranking-table__container
+      .mobile-only
+        table.ranking-table.ranking-table--fixed
+          thead
+            tr
+              th State
+
+          tbody
+            each value in values
+              tr
+                td
+                  = value.state
+
+      .ranking-table__wrapper
+        table.ranking-table.ranking-table--data
+          thead
+            tr
+              th(class='table-sort' data-index='0') State
+              th(class='table-sort' data-index='1') Rank
+              th(class='table-sort' data-index='2') Effective Tax Rate
+              th(class='table-sort' data-index='3') Nominal Tax Rate
+              th(class='table-sort' data-index='4') Assessment Ratio
+              th Homestead Exemption
+              th(class='table-sort' data-index='6') Average Tax Bill
+              th(class='table-sort' data-index='7') Property Transfer Tax Rate
+
+          tbody
+            each value in values
+              tr
+                td
+                  = value.state
+
+                td
+                  = value.rank
+
+                td
+                  = value.effectiveTaxRate
+
+                td
+                  = value.nominalTaxRate
+
+                td
+                  = value.assessmentRatio
+
+                td
+                  = value.homesteadExemption
+
+                td
+                  = value.averageTaxBill
+
+                td
+                  = value.propertyTransfer
+
+    p.ranking-table__under-text
+      span.reg
+        | *
+      | Assessment ratios are set by municipalities in New York.
+
+  .btn-container.btn-container--show-full
+    button.btn-go-back
+      span.btn-go-back-text Show the full data
+      +btn_icon

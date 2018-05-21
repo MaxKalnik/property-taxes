@@ -1,0 +1,513 @@
+-
+  var values = [
+     {
+       rank: 1,
+       state: "Arkansas",
+       effectiveTaxRate: "0.10%",
+       nominalTaxRate: "0.51%",
+       assessmentRatio: "20%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$113.70",
+       propertyTransfer: "0.33%"
+     },
+     {
+       rank: 2,
+       state: "Colorado",
+       effectiveTaxRate: "0.19%",
+       nominalTaxRate: "1.06%",
+       assessmentRatio: "7.96% for residental, 29% non-residential",
+       homesteadExemption: "$0",
+       averageTaxBill: "$799.65",
+       propertyTransfer: "0.01%"
+     },
+     {
+       rank: 3,
+       state: "New Mexico",
+       effectiveTaxRate: "0.25%",
+       nominalTaxRate: "0.75%",
+       assessmentRatio: "33%",
+       homesteadExemption: "$18,000",
+       averageTaxBill: "$474.12",
+       propertyTransfer: "0.00%"
+     },
+     {
+       rank: 4,
+       state: "Tennessee",
+       effectiveTaxRate: "0.31%",
+       nominalTaxRate: "0.76%",
+       assessmentRatio: "40%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$574.29",
+       propertyTransfer: "0.49%"
+     },
+     {
+       rank: 5,
+       state: "West Virginia",
+       effectiveTaxRate: "0.32%",
+       nominalTaxRate: "0.53%",
+       assessmentRatio: "60%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$438.38",
+       propertyTransfer: "0.33%"
+     },
+     {
+       rank: 6,
+       state: "Alabama",
+       effectiveTaxRate: "0.39%",
+       nominalTaxRate: "0.39%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$60,000",
+       averageTaxBill: "$376.59",
+       propertyTransfer: "0.25%"
+     },
+     {
+       rank: 7,
+       state: "Nevada",
+       effectiveTaxRate: "0.40%",
+       nominalTaxRate: "1.14%",
+       assessmentRatio: "35%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$1,029.61",
+       propertyTransfer: "0.42%"
+     },
+     {
+       rank: 8,
+       state: "Georgia",
+       effectiveTaxRate: "0.42%",
+       nominalTaxRate: "1.05%",
+       assessmentRatio: "40%",
+       homesteadExemption: "$5,000",
+       averageTaxBill: "$715.47",
+       propertyTransfer: "0.10%"
+     },
+     {
+       rank: 9,
+       state: "Louisiana",
+       effectiveTaxRate: "0.53%",
+       nominalTaxRate: "0.53%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$75,000",
+       averageTaxBill: "$565.70",
+       propertyTransfer: "0.00%"
+     },
+     {
+       rank: 10,
+       state: "North Dakota",
+       effectiveTaxRate: "0.53%",
+       nominalTaxRate: "1.06%",
+       assessmentRatio: "50%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$667.55",
+       propertyTransfer: "0.00%"
+     },
+     {
+       rank: 11,
+       state: "Ohio",
+       effectiveTaxRate: "0.57%",
+       nominalTaxRate: "1.62%",
+       assessmentRatio: "35%",
+       homesteadExemption: "12.50% Credit",
+       averageTaxBill: "$763.74",
+       propertyTransfer: "0.10%"
+     },
+     {
+       rank: 12,
+       state: "Oklahoma",
+       effectiveTaxRate: "0.63%",
+       nominalTaxRate: "0.63%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$8,000",
+       averageTaxBill: "$797.63",
+       propertyTransfer: "0.17%"
+     },
+     {
+       rank: 13,
+       state: "Utah",
+       effectiveTaxRate: "0.64%",
+       nominalTaxRate: "1.16%",
+       assessmentRatio: "55%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$2,187.64",
+       propertyTransfer: "0.00%"
+     },
+     {
+       rank: 14,
+       state: "Mississippi",
+       effectiveTaxRate: "0.65%",
+       nominalTaxRate: "0.65%",
+       assessmentRatio: "100%",
+       homesteadExemption: "90% of Assessed Value",
+       averageTaxBill: "$80.83",
+       propertyTransfer: "0.00%"
+     },
+     {
+       rank: 15,
+       state: "South Carolina",
+       effectiveTaxRate: "0.66%",
+       nominalTaxRate: "0.65%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$100,000",
+       averageTaxBill: "$658.50",
+       propertyTransfer: "0.37%"
+     },
+     {
+       rank: 16,
+       state: "Illinois",
+       effectiveTaxRate: "0.72%",
+       nominalTaxRate: "2.16%",
+       assessmentRatio: "33%",
+       homesteadExemption: "$6,000",
+       averageTaxBill: "$638.54",
+       propertyTransfer: "0.10%"
+     },
+     {
+       rank: 17,
+       state: "Kentucky",
+       effectiveTaxRate: "0.77%",
+       nominalTaxRate: "0.77%",
+       assessmentRatio: "100%",
+       homesteadExemption: "Age 65+ or Disabled only, 37,600",
+       averageTaxBill: "$1,152.12",
+       propertyTransfer: "0.10%"
+     },
+     {
+       rank: 18,
+       state: "Michigan",
+       effectiveTaxRate: "0.81%",
+       nominalTaxRate: "1.62%",
+       assessmentRatio: "50%",
+       homesteadExemption: "Amount of Local School Operating Tax, 0.18% Maximum",
+       averageTaxBill: "$1,268.95",
+       propertyTransfer: "0.90%"
+     },
+     {
+       rank: 19,
+       state: "Indiana",
+       effectiveTaxRate: "0.86%",
+       nominalTaxRate: "0.86%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$45,000 Standard Deduction + 35% of Assessed Value Less Deduction",
+       averageTaxBill: "$448.05",
+       propertyTransfer: "0.00%"
+     },
+     {
+       rank: 20,
+       state: "Delaware",
+       effectiveTaxRate: "0.86%",
+       nominalTaxRate: "1.12%",
+       assessmentRatio: "70%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$2,121.73",
+       propertyTransfer: "3.00%"
+     },
+     {
+       rank: 21,
+       state: "Missouri",
+       effectiveTaxRate: "0.90%",
+       nominalTaxRate: "0.90%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$1,208.31",
+       propertyTransfer: "0.00%"
+     },
+     {
+       rank: 22,
+       state: "Arizona",
+       effectiveTaxRate: "0.93%",
+       nominalTaxRate: "1.03%",
+       assessmentRatio: "90%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$2,274.01",
+       propertyTransfer: "0.00%"
+     },
+     {
+       rank: 23,
+       state: "Idaho",
+       effectiveTaxRate: "1.03%",
+       nominalTaxRate: "1.03%",
+       assessmentRatio: "100%",
+       homesteadExemption: "50% of Assessed Value",
+       averageTaxBill: "$1,231.78",
+       propertyTransfer: "0.00%"
+     },
+     {
+       rank: 24,
+       state: "North Carolina",
+       effectiveTaxRate: "1.07%",
+       nominalTaxRate: "1.06%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$2,407.56",
+       propertyTransfer: "0.27%"
+     },
+     {
+       rank: 25,
+       state: "Hawaii",
+       effectiveTaxRate: "1.14%",
+       nominalTaxRate: "1.14%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$7,392.21",
+       propertyTransfer: "0.23%"
+     },
+     {
+       rank: 26,
+       state: "Montana",
+       effectiveTaxRate: "1.21%",
+       nominalTaxRate: "1.21%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$2,529.44",
+       propertyTransfer: "0.00%"
+     },
+     {
+       rank: 27,
+       state: "Wyoming",
+       effectiveTaxRate: "1.22%",
+       nominalTaxRate: "1.21%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$4,482.37",
+       propertyTransfer: "0.00%"
+     },
+     {
+       rank: 28,
+       state: "Florida",
+       effectiveTaxRate: "1.30%",
+       nominalTaxRate: "1.30%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$50,000",
+       averageTaxBill: "$2,808.04",
+       propertyTransfer: "1.05%"
+     },
+     {
+       rank: 29,
+       state: "South Dakota",
+       effectiveTaxRate: "1.32%",
+       nominalTaxRate: "1.32%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$1,690.72",
+       propertyTransfer: "0.10%"
+     },
+     {
+       rank: 30,
+       state: "Kansas",
+       effectiveTaxRate: "1.37%",
+       nominalTaxRate: "1.37%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$20,000",
+       averageTaxBill: "$1,191.87",
+       propertyTransfer: "0.10%"
+     },
+     {
+       rank: 31,
+       state: "Texas",
+       effectiveTaxRate: "1.39%",
+       nominalTaxRate: "1.39%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$18,000",
+       averageTaxBill: "$2,448.92",
+       propertyTransfer: "0.00%"
+     },
+     {
+       rank: 32,
+       state: "Virginia",
+       effectiveTaxRate: "1.47%",
+       nominalTaxRate: "1.47%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$4,581.13",
+       propertyTransfer: "0.75%"
+     },
+     {
+       rank: 33,
+       state: "Minnesota",
+       effectiveTaxRate: "1.48%",
+       nominalTaxRate: "1.48%",
+       assessmentRatio: "100%",
+       homesteadExemption: "40% of Assessed Value",
+       averageTaxBill: "$1,690.67",
+       propertyTransfer: "0.56%"
+     },
+     {
+       rank: 34,
+       state: "Iowa",
+       effectiveTaxRate: "1.50%",
+       nominalTaxRate: "1.50%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$4,850",
+       averageTaxBill: "$1,932.59",
+       propertyTransfer: "0.16%"
+     },
+     {
+       rank: 35,
+       state: "Nebraska",
+       effectiveTaxRate: "1.56%",
+       nominalTaxRate: "1.56%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$1,760.50",
+       propertyTransfer: "0.23%"
+     },
+     {
+       rank: 36,
+       state: "Alaska",
+       effectiveTaxRate: "1.89%",
+       nominalTaxRate: "1.89%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$2,336.38",
+       propertyTransfer: "0.00%"
+     },
+     {
+       rank: 37,
+       state: "Oregon",
+       effectiveTaxRate: "1.90%",
+       nominalTaxRate: "1.90%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$5,701.90",
+       propertyTransfer: "0.00%"
+     },
+     {
+       rank: 38,
+       state: "Maine",
+       effectiveTaxRate: "1.98%",
+       nominalTaxRate: "1.98%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$10,000",
+       averageTaxBill: "$4,300.75",
+       propertyTransfer: "0.44%"
+     },
+     {
+       rank: 39,
+       state: "Washington",
+       effectiveTaxRate: "2.03%",
+       nominalTaxRate: "2.03%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$6,343.68",
+       propertyTransfer: "1.28%"
+     },
+     {
+       rank: 40,
+       state: "Pennsylvania",
+       effectiveTaxRate: "2.08%",
+       nominalTaxRate: "2.08%",
+       assessmentRatio: "100%",
+       homesteadExemption: "Up to 50% of Assessed Value (Amount Set by County Commission)",
+       averageTaxBill: "$1,868.10",
+       propertyTransfer: "1.00%"
+     },
+     {
+       rank: 41,
+       state: "California",
+       effectiveTaxRate: "2.52%",
+       nominalTaxRate: "2.52%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$6,000",
+       averageTaxBill: "$14,381.52",
+       propertyTransfer: "0.11%"
+     },
+     {
+       rank: 42,
+       state: "New York",
+       effectiveTaxRate: "2.65%",
+       nominalTaxRate: "3.46%",
+       assessmentRatio: "79.97%*",
+       homesteadExemption: "$30,000",
+       averageTaxBill: "$4,478.64",
+       propertyTransfer: "1.68%"
+     },
+     {
+       rank: 43,
+       state: "District of Columbia",
+       effectiveTaxRate: "2.67%",
+       nominalTaxRate: "2.67%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$69,100",
+       averageTaxBill: "$12,256.34",
+       propertyTransfer: "1.45%"
+     },
+     {
+       rank: 44,
+       state: "Maryland",
+       effectiveTaxRate: "2.67%",
+       nominalTaxRate: "2.67%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$8,268.16",
+       propertyTransfer: "0.50%"
+     },
+     {
+       rank: 45,
+       state: "Wisconsin",
+       effectiveTaxRate: "2.68%",
+       nominalTaxRate: "2.68%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$15,800",
+       averageTaxBill: "$4,502.75",
+       propertyTransfer: "0.30%"
+     },
+     {
+       rank: 46,
+       state: "Connecticut",
+       effectiveTaxRate: "3.47%",
+       nominalTaxRate: "4.95%",
+       assessmentRatio: "70%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$10,775.87",
+       propertyTransfer: "1.00%"
+     },
+     {
+       rank: 47,
+       state: "Vermont",
+       effectiveTaxRate: "3.55%",
+       nominalTaxRate: "3.55%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$9,247.52",
+       propertyTransfer: "1.25%"
+     },
+     {
+       rank: 48,
+       state: "Massachusetts",
+       effectiveTaxRate: "3.62%",
+       nominalTaxRate: "3.62%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$21,084.31",
+       propertyTransfer: "0.45%"
+     },
+     {
+       rank: 49,
+       state: "Rhode Island",
+       effectiveTaxRate: "4.17%",
+       nominalTaxRate: "4.16%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$15,248.14",
+       propertyTransfer: "0.46%"
+     },
+     {
+       rank: 50,
+       state: "New Hampshire",
+       effectiveTaxRate: "4.46%",
+       nominalTaxRate: "4.46%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$11,655.67",
+       propertyTransfer: "1.50%"
+     },
+     {
+       rank: 51,
+       state: "New Jersey",
+       effectiveTaxRate: "7.13%",
+       nominalTaxRate: "7.13%",
+       assessmentRatio: "100%",
+       homesteadExemption: "$0",
+       averageTaxBill: "$21,665.65",
+       propertyTransfer: "0.55%"
+     }
+  ]

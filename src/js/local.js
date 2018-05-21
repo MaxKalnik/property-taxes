@@ -1,6 +1,5 @@
 $(document).ready(function () {
     var body = $('body');
-
     function topMenu() {
         if ($(window).width() < 959) {
 
@@ -88,5 +87,81 @@ $(document).ready(function () {
         body.on('click', '.map__tap-to-full-size--' + elem, function () {
             openPhotoSwipe(items[index]);
         });
+    });
+    body.on('click', '.ranking-table__hint', function () {
+        $(this).css('display', 'none');
+    });
+
+    body.on('click', '.table-sort', function () {
+        var $rows = $('.ranking-table--data tr').splice(1);
+        var $index = $(this).data('index');
+
+        var descend = true;
+
+        if ($(this).hasClass('table-sort--down')) {
+            $('.table-sort').removeClass('table-sort--down table-sort--top');
+            descend = false;
+            $(this).addClass('table-sort--top')
+        } else {
+            $('.table-sort').removeClass('table-sort--down table-sort--top');
+            $(this).addClass('table-sort--down');
+        }
+
+        var parseFloatText = function (item) {
+            return parseFloat(item);
+        };
+
+        var sortFunc = function (a, b) {
+            var left = $(a).find('td')[$index];
+            left = $(left).text();
+            if (parseFloatText(left)) {
+                left = parseFloatText(left);
+            } else if (left.includes('$')) {
+                left = left.split('$')[1];
+                if (left.includes(',')) {
+                    left = left.replace(/,/g, '');
+                }
+                left = parseFloatText(left);
+            } else if (left.includes('%')) {
+                left = left.split('$')[0];
+                left = parseFloatText(left);
+            }
+            var right = $(b).find('td')[$index];
+            right = $(right).text();
+            if (parseFloatText(right)) {
+                right = parseFloatText(right);
+            } else if (right.includes('$')) {
+                right = right.split('$')[1];
+                if (right.includes(',')) {
+                    right = right.replace(/,/g, '');
+                }
+                right = parseFloatText(right);
+            } else if (right.includes('%')) {
+                right = right.split('$')[0];
+                right = parseFloatText(right);
+            }
+            if (descend) {
+                if (left > right) {
+                    return 1
+                } else {
+                    return -1;
+                }
+
+            } else {
+                if (left < right) {
+                    return 1
+                } else {
+                    return -1;
+                }
+            }
+        }
+
+        $rows.sort(sortFunc);
+
+        var $mobileRows = $('.ranking-table--fixed tr').splice(1);
+        for (var i = 0; i < $mobileRows.length; i++) {
+            $($mobileRows[i]).find('td').first().text($($rows[i]).find('td').first().text());
+        }
+        $('.ranking-table--data tbody').html($rows);
     });
 });
